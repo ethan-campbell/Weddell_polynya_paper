@@ -43,9 +43,9 @@ import geo_tools as gt
 set_printoptions(threshold=100)    # speeds up printing of large dicts containing NumPy arrays during debugging
 plt.ion()                          # necessary for interactive contour label placement
 
-# optional update to plotting font
-# mpl.rc('font',**{'family':'sans-serif','sans-serif':'Helvetica'}) # note: had to 'install' Helvetica using fondu
-#                                                                   #       see https://goo.gl/crpbt2
+# prettier font for plots
+# note: before uncommenting, have to 'install' Helvetica using fondu (see instructions at https://goo.gl/crpbt2)
+# mpl.rc('font',**{'family':'sans-serif','sans-serif':'Helvetica'})
 
 ####################################################################################################
 
@@ -67,12 +67,12 @@ load_erai_land_sea_mask = True      # always keep this True!
 
 # analyze data and generate paper figures
 plot_fig_1 = False                  # note: this routine requires manual input for contour labels
-plot_fig_3 = False
 plot_fig_2_ED_figs_3_4 = False
+plot_fig_3 = False
 plot_fig_4_ED_figs_6_7 = False
 plot_fig_5_ED_fig_9_ED_table_1 = False
 plot_ED_fig_1 = False
-plot_ED_figs_2_8 = True
+plot_ED_figs_2_8 = False
 plot_ED_fig_5 = False
 
 # directory for plotting output
@@ -2336,7 +2336,7 @@ if plot_fig_5_ED_fig_9_ED_table_1:
         erai_sanae_aws_subdaily \
             = erai_daily['msl'].sel(lons=sanae_aws_loc[0],lats=sanae_aws_loc[1],method='nearest').to_series()
         pickle.dump(erai_sanae_aws_subdaily,open(figure_pickle_dir + 'fig_5_erai_sanae','wb'))
-    text_file = open(current_results_dir + 'nature_reviews_erai_sanae_mslp_comparison.txt','w')
+    text_file = open(current_results_dir + 'figure_5_erai_sanae_mslp_comparison.txt','w')
     text_file.write('Comparison of subdaily ERA-Interim and Queen Maud Land station pressure record:\n'
                     'Correlation coefficient: {0:.2f}\n'
                     'Mean absolute deviation: {1:.2f} hPa\n'
@@ -3262,7 +3262,7 @@ if plot_ED_figs_2_8:
         specific_wmoids = [5904471,5904468]  # specific WMOids to plot (format: list of ints)
         wmoid_blacklist = [7900407]          # manual blacklist for position jump
         prof_blacklist = [110] # profile number blacklist, corresponding to float at same index in wmoid_blacklist
-        make_sic_fig(plot_argo_locs_not_trajs,nan_threshold,save_as,plot_as_subplots,subplot_add_colorbar,subplot_rows,
+        make_sic_fig(plot_argo_locs_not_trajs,None,save_as,plot_as_subplots,subplot_add_colorbar,subplot_rows,
                      map_params,subplot_fig_size,None,None,None,None,float_toi,
                      lon_bounds,lat_bounds,only_plot_specific_wmoids,specific_wmoids,wmoid_blacklist,prof_blacklist,
                      grid_lats=arange(-80,60,2),grid_lons=arange(-80,50,10),
@@ -3287,7 +3287,7 @@ if plot_ED_figs_2_8:
         specific_wmoids = [5904471,5904468]  # specific WMOids to plot (format: list of ints)
         wmoid_blacklist = [7900407]          # manual blacklist for position jump
         prof_blacklist = [110] # profile number blacklist, corresponding to float at same index in wmoid_blacklist
-        make_sic_fig(plot_argo_locs_not_trajs,nan_threshold,save_as,plot_as_subplots,subplot_add_colorbar,subplot_rows,
+        make_sic_fig(plot_argo_locs_not_trajs,None,save_as,plot_as_subplots,subplot_add_colorbar,subplot_rows,
                      map_params,subplot_fig_size,None,None,None,None,float_toi,
                      lon_bounds,lat_bounds,only_plot_specific_wmoids,specific_wmoids,wmoid_blacklist,prof_blacklist,
                      grid_lats=arange(-80,60,3),grid_lons=arange(-80,50,10),
