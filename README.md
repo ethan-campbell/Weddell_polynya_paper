@@ -11,7 +11,9 @@ The data analyzed in our paper are publicly available (see the "Data availabilit
 - The scripts in this repository include routines for downloading larger data files that are unlikely to change substantially in the future.
 
 ### Organization and control flow:
-The main analysis script is `weddell_polynya_paper.py`. Control flow within this script can be modified by changing boolean variables (`True`/`False`) near the top of the file to turn on/off sections of code that download data or generate the paper figures. Most of these sections have their own control flow, again modified using boolean variables. This main script calls functions located in the other files: `plot_tools.py`, `load_product.py`, `download_product.py`, `download_file.py`, `geo_tools.py`, and `time_tools.py`. The functions in `plot_tools.py` are not well-documented, but most of the other functions are described thoroughly via docstrings.
+The main analysis script is `weddell_polynya_paper.py`. Control flow within this script can be modified by changing boolean variables (`True`/`False`) near the top of the file to turn on/off sections of code that download data or generate the paper figures. Most of these sections have their own control flow, again modified using boolean variables.
+
+This main script calls functions located in the other files: `plot_tools.py`, `load_product.py`, `download_product.py`, `download_file.py`, `geo_tools.py`, and `time_tools.py`. The functions in `plot_tools.py` are not well-documented, but most of the other functions are described thoroughly via docstrings.
 
 Data are sourced from the `Data/` directory and subdirectories within. The required directory structure is included in the `Data.zip` file described below. Figures and analysis results are saved to the `Results/` directory.
 
