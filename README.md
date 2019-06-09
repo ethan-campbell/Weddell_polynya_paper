@@ -8,7 +8,7 @@ These scripts carry out all steps from start to finish: downloading the raw data
 ### Data:
 The data analyzed in our paper are publicly available (see the "Data availability" statement in the Methods section), with the exception of updates to the UW Calibrated O2 package for float 5903616. As a summary:
 - The ZIP file described below contains smaller data files (including the UW-O2 updates) and archived versions of data products that are liable to change in the future.
-- The scripts in this repository include routines for downloading larger data files that are unlikely to change substantially in the future.
+- The scripts in this repository include routines for downloading larger data files that are less likely to change substantially in the future.
 
 ### Organization and control flow:
 The main analysis script is `weddell_polynya_paper.py`. Control flow within this script can be modified by changing boolean variables (`True`/`False`) near the top of the file to turn on/off sections of code that download data or generate the paper figures. Most of these sections have their own control flow, again modified using boolean variables.
