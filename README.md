@@ -8,7 +8,9 @@ Please contact me at [ethancc@uw.edu](mailto:ethancc@uw.edu) if you have any que
 These scripts carry out all steps from start to finish: downloading the raw data, processing and analyzing them, and generating the published figures. I am happy to send intermediate data products (such as a processed time series within one of the figures) upon request if that would be most expedient, since running the full analysis script requires downloading numerous large data files.
 
 ### Data:
-The data analyzed in our paper are publicly available (see the "Data availability" statement in the Methods section), with the exception of updates to the UW Calibrated O2 package for float 5903616. These scripts will enable you to download necessary large data files that are unlikely to change substantially in the future. For data files that are smaller (including the UW-O2 updates) or liable to change in the future, I have archived the versions used in this paper as a ZIP file on Google Drive.
+The data analyzed in our paper are publicly available (see the "Data availability" statement in the Methods section), with the exception of updates to the UW Calibrated O2 package for float 5903616. As a summary:
+- The ZIP file described below contains small data files (including the UW-O2 updates) and archived versions of data products that are liable to change in the future.
+- These scripts include routines for downloading larger data files that are unlikely to change substantially in the future.
 
 ### Organization and control flow:
 The main analysis script is `weddell_polynya_paper.py`. Control flow within this script can be modified by changing boolean variables (`True`/`False`) near the top of the file to turn on/off sections of code that download data or generate the paper figures. Most of these sections have their own control flow, again modified using boolean variables. This main script calls functions located in the other files: `plot_tools.py`, `load_product.py`, `download_product.py`, `download_file.py`, `geo_tools.py`, and `time_tools.py`. Some of these functions are well-documented via docstrings (feel free to reuse for your own purposes!), but many are not well-documented.
@@ -20,7 +22,7 @@ Data is sourced from the `Data/` directory and subdirectories within, which shou
 
 ### Step-by-step instructions for preparing to run the main analysis script:
 1. Clone or download this GitHub repository onto your local machine.
-2. Download the `Data.zip` file (2.5 GB) from this Google Drive link: **TBD**. Unzip into the `Weddell_polynya_paper` directory.
+2. Download the `Data.zip` file (about 2 GB) from this Google Drive link: **TBD**. Unzip into the `Weddell_polynya_paper` directory.
     - This contains the following archived data: Argo profiles from the GDAC\*, SOCCOM\*, and UW-O2 (original and updated); ETOPO1 bathymetry; the Marshall SAM index; GSHHG coast shapefiles; ISD\* and READER meteorological station records; COARE 2.0 turbulent heat fluxes; ERA-Interim monthly mean fields\* and land-sea mask; NSIDC Nimbus-5 ESMR sea ice concentration data\*; polar stereographic gridfiles and areafiles for AMSR 12.5 km and NSIDC 25 km sea ice grids; and WOD shipboard and instrumented seal profiles. The data are organized in the directory structure expected by the Python scripts.
     - The starred (\*) items may be re-downloaded, if you wish, using functions within the provided Python scripts. The rest of the data may be re-downloaded from the hosting websites (see note regarding WOD), which are linked via DOI in the paper's References section as well as within function docstrings in `load_product.py`.
     - The WOD hydrographic profiles may be re-downloaded using the [NCEI WODselect](https://www.nodc.noaa.gov/OC5/SELECT/dbsearch/dbsearch.html) utility with the following search parameters: coordinates 65°W-60°E, 90-50°S (or similar); datasets OSD, CTD, and APB; and variables T and S in "Column 1."
