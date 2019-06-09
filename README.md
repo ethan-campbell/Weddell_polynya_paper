@@ -20,7 +20,7 @@ Data is sourced from the `Data/` directory and subdirectories within, which shou
 ### Prerequisites:
 1. `Python 3.6.7` or higher and `conda` installed ([Anaconda](https://www.anaconda.com/distribution/) distribution recommended; **note**: there is no guarantee that these scripts will remain compatible with future Python releases)
 
-### Instructions for running this code and reproducing the paper figures:
+### Step-by-step instructions for preparing to run the main analysis script:
 1. Clone or download this GitHub repository onto your local machine.
 2. Download the `Data.zip` file (**TBD** GB) from this Google Drive link: **TBD**. Unzip into the `Weddell_polynya_paper` directory.
     - This contains the following archived data: Argo profiles from the GDAC\*, SOCCOM\*, and UW-O2 (original and updated); ETOPO1 bathymetry; the Marshall SAM index; GSHHG coast shapefiles; ISD\* and READER meteorological station records; COARE 2.0 turbulent heat fluxes; ERA-Interim monthly mean fields\* and land-sea mask; polar stereographic gridfiles and areafiles for AMSR 12.5 km and NSIDC 25 km sea ice concentration data; and WOD shipboard and instrumented seal profiles. The data are organized in the directory structure expected by the Python scripts.
