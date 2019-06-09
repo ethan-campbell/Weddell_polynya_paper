@@ -1,1 +1,5 @@
 Data/
+Results/*.pdf
+Results/*.txt
+Results/*.tex
+__pycache__/
