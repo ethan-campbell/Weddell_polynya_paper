@@ -1,5 +1,3 @@
-# Weddell_polynya_paper
-
 This repository contains the Python analysis scripts used for Campbell et al. (2019), "[Antarctic offshore polynyas linked to Southern Hemisphere climate anomalies](https://www.nature.com/articles/s41586-019-1294-0)", *Nature*, doi:10.1038/s41586-019-1294-0.
 
 Please contact me at [ethancc@uw.edu](mailto:ethancc@uw.edu) if you have any questions or difficulties with using this code. **Note:** My goal is to achieve full reproducibility, but this repository is still a work in progress. Not everything runs perfectly 'out of the box' yet! Within a week of publication I intend to release a final, bug-free archived version with a Zenodo DOI.
