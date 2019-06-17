@@ -3296,6 +3296,8 @@ if plot_ED_figs_2_8:
 
 # Extended Data Fig. 5. Winds and wind-induced sea ice divergence during the 2016 polynya.
 if plot_ED_fig_5:
+    use_erai_pickle = True
+
     save_as = 'ED_figure_5'
     param_names = 'Estimated ice divergence'
     start_end_dates = [(2016,7,22),(2016,8,17)]
@@ -3312,8 +3314,14 @@ if plot_ED_fig_5:
     day_string_halign = 'left'
 
     # load reanalysis
-    toi = [datetime(2016,6,28),datetime(2016,12,20)]
-    erai_daily = ldp.load_ecmwf(era_custom_dir,'erai_daily_weddell.nc',datetime_range=toi)
+    toi = [datetime(2016,7,19),datetime(2016,8,20)]
+    if not use_erai_pickle:
+        erai_daily = ldp.load_ecmwf(era_custom_dir,'erai_daily_weddell.nc',datetime_range=toi)
+        erai_daily = erai_daily.drop(['msl','sst','skt','t2m','d2m','q2m','ui10','vi10','div','si10'])
+        erai_daily.load()
+        pickle.dump(erai_daily,open(figure_pickle_dir + 'ED_fig_5_erai_div_ice_u10_v10','wb'))
+    else:
+        erai_daily = pickle.load(open(figure_pickle_dir + 'ED_fig_5_erai_div_ice_u10_v10','rb'))
 
     div_ice_new_units = erai_daily['div_ice'].copy()
     div_ice_new_units = div_ice_new_units * 100.0
