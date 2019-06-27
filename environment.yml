@@ -62,8 +62,10 @@ dependencies:
   - xz=5.2.4=h1de35cc_1001
   - zlib=1.2.11=h1de35cc_1004
   - pip:
+    - cftime==1.0.3.4
     - circles==0.1
     - ecmwf-api-client==1.5.4
     - gsw==3.3.1
+    - netcdf4==1.5.1.2
 prefix: /Applications/anaconda/envs/weddell_polynya
 
