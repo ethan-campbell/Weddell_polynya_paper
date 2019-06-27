@@ -16,7 +16,6 @@ import xarray as xr
 import pickle
 import gsw
 import seawater
-import osr, gdal
 import codecs
 
 import geo_tools as gt

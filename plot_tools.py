@@ -19,7 +19,6 @@ from matplotlib import gridspec
 from matplotlib.patches import Polygon
 os.environ['PROJ_LIB'] = '/Applications/anaconda/share/proj'      # temporarily necessary for Basemap import
 from mpl_toolkits.basemap import Basemap
-from mpl_toolkits.mplot3d import Axes3D
 from collections import OrderedDict
 warnings.filterwarnings('ignore','.*is_string_like function.*')   # MatplotlibDeprecationWarning upon cmocean import
 import cmocean
