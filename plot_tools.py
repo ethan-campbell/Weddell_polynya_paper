@@ -17,7 +17,8 @@ import matplotlib.colors as mcolors
 import matplotlib.legend as mlegend
 from matplotlib import gridspec
 from matplotlib.patches import Polygon
-os.environ['PROJ_LIB'] = '/Applications/anaconda/share/proj'      # temporarily necessary for Basemap import
+if os.path.isdir('/Applications/anaconda/share/proj'): # needed for Basemap import on my machine, but probably not yours
+    os.environ['PROJ_LIB'] = '/Applications/anaconda/share/proj'
 from mpl_toolkits.basemap import Basemap
 from collections import OrderedDict
 warnings.filterwarnings('ignore','.*is_string_like function.*')   # MatplotlibDeprecationWarning upon cmocean import

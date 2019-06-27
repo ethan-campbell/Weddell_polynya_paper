@@ -21,7 +21,8 @@ import matplotlib.ticker as pltick
 import matplotlib.legend as mlegend
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 from matplotlib.patches import Polygon, Rectangle, ConnectionPatch
-os.environ['PROJ_LIB'] = '/Applications/anaconda/share/proj'    # temporarily necessary for Basemap import
+if os.path.isdir('/Applications/anaconda/share/proj'): # needed for Basemap import on my machine, but probably not yours
+    os.environ['PROJ_LIB'] = '/Applications/anaconda/share/proj'
 from mpl_toolkits.basemap import Basemap
 from matplotlib import gridspec
 from datetime import datetime, timedelta
