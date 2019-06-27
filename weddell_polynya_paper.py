@@ -77,13 +77,13 @@ plot_ED_figs_2_8 = False
 plot_ED_fig_5 = False
 
 # directory for plotting output
-current_results_dir = 'Results/'
+current_results_dir = os.getcwd() + '/Results/'
 
 # directory for h4toh5 executable
 script_dir = os.getcwd() + '/'
 
 # root directory for data files
-data_dir = 'Data/'
+data_dir = os.getcwd() + '/Data/'
 
 # sub-directories for data files
 argo_gdac_dir = data_dir + 'Argo/'
