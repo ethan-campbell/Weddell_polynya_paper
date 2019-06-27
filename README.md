@@ -41,4 +41,4 @@ Note that this repository also contains the required [`h4toh5`](https://support.
 9. You're done with setup! The analysis portions of the `weddell_polynya_paper.py` script should run without issues. Set the boolean control flow variables at the top to run sections of code corresponding to each figure. Note that the section for Extended Data Table 1 produces a LaTeX file, which can subsequently be compiled and saved to a PDF file.
 
 ### Known bugs:
-* Importing the Matplotlib `Basemap` toolkit currently might require one to manually set the location of `PROJ_LIB`. To do this, edit the relevant line within the `import` statements in `weddell_polynya_paper.py` and `plot_tools.py`.
+* None. Let me know if you find any!
