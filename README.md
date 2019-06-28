@@ -29,7 +29,7 @@ Data are sourced from the `Data/` directory and subdirectories within. The requi
 Note that this repository also contains the required [`h4toh5`](https://support.hdfgroup.org/products/hdf5_tools/h4toh5/) command-line utility.
 
 ### Prerequisites:
-1. `Python 3` and `conda` installed. The [Anaconda](https://www.anaconda.com/distribution/) distribution is recommended, and includes `conda`. While there is no guarantee that these scripts will remain compatible with future Python releases, the provided `conda` environment file (see instructions below) ensures compatability by providing a list of the exact versions of Python packages &ndash; and Python itself &ndash; that were used when writing this code.
+1. `Python 3` and `conda` installed. The [Anaconda](https://www.anaconda.com/distribution/) distribution is recommended, and includes `conda`. While there is no guarantee that these scripts will remain compatible with future Python releases, the provided `conda` environment file (see instructions below) ensures compatibility by providing a list of the exact versions of Python packages &ndash; and Python itself &ndash; that were used when writing this code.
 
 ### Step-by-step instructions for preparing to run the main analysis script:
 1. Clone or download this GitHub repository onto your local machine.
