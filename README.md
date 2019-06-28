@@ -1,8 +1,17 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3259013.svg)](https://doi.org/10.5281/zenodo.3259013)
+
 **This repository contains the Python analysis scripts used for Campbell et al. (2019), "[Antarctic offshore polynyas linked to Southern Hemisphere climate anomalies](https://www.nature.com/articles/s41586-019-1294-0)", *Nature*, doi:10.1038/s41586-019-1294-0.**
 
 Please contact me at [ethancc@uw.edu](mailto:ethancc@uw.edu) if you have any questions or difficulties with using this code.
 
-### General info:
+### Attribution:
+This code is freely available for reuse as described in the MIT License included in this repository. However, if you use this code or any derived data products in an academic publication, you are obliged to provide the following citations:
+
+* Campbell, E.C. (2019, June 28). Analysis scripts for "Antarctic offshore polynyas linked to Southern Hemisphere climate anomalies" (Version v1.0.0). Zenodo. doi:[10.5281/zenodo.3259013](http://doi.org/10.5281/zenodo.3259013).
+
+* Campbell, E.C., Wilson, E.A., Moore, G.W.K., Riser, S.C., Brayton, C.E., Mazloff, M.R., Talley, L.D. (2019). Antarctic offshore polynyas linked to Southern Hemisphere climate anomalies. *Nature*, **570**(7761), 319-325. doi:[10.1038/s41586-019-1294-0](https://www.nature.com/articles/s41586-019-1294-0). 
+
+### Description:
 These scripts carry out all steps from start to finish: downloading the raw data, processing and analyzing them, and generating the published figures. I am happy to send intermediate data products (such as a processed time series within one of the figures) upon request if that would be most expedient, since running the full analysis script requires downloading numerous large data files.
 
 ### Data:
